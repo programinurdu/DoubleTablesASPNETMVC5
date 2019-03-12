@@ -16,7 +16,7 @@ namespace DoubleTablesASPNETMVC5.ViewModels.Home
                 List<Student> std = db.Students.ToList();
                 List<ListTypesData> ltd = db.ListTypesDatas.Where(x => x.ListTypeId == (int)ListTypes.Gender).ToList();
 
-                students = std.Join(ltd,
+                students =  std.Join(ltd,
                             ss => ss.Gender,
                             ld => ld.ListTypeDataId,
                             (ss, ld) => new Student()
