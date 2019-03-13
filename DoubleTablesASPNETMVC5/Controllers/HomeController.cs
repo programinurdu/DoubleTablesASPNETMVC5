@@ -32,9 +32,14 @@ namespace DoubleTablesASPNETMVC5.Controllers
 
             StudentViewModels svm = new StudentViewModels();
             Student student = svm.GetStudentById(id);
-            ViewData["Gender"] = student.Gender;
+            LoadDataIntoDropDownList(student);
 
             return View("~/Views/Home/LoadDropDownList.cshtml", student);
+        }
+
+        private void LoadDataIntoDropDownList(Student student)
+        {
+            ViewData["Gender"] = student.Gender;
         }
     }
 }
