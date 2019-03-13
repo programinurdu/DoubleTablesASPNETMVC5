@@ -1,0 +1,3 @@
+﻿@using DoubleTablesASPNETMVC5.ViewModels.Shared
+
+@Html.DropDownList("", new SelectList(ComboBoxData.GetListData(ListTypes.Gender), "Value", "Text", ViewData["Gender"]), string.Empty, new { @class = "form-control" })

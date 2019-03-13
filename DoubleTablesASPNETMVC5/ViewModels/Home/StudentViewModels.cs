@@ -1,5 +1,6 @@
 ﻿using DoubleTablesASPNETMVC5.Models.DB;
 using DoubleTablesASPNETMVC5.ViewModels.Shared;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -32,6 +33,18 @@ namespace DoubleTablesASPNETMVC5.ViewModels.Home
             }
 
             return students;
+        }
+
+        public Student GetStudentById(int id)
+        {
+            Student student = new Student();
+
+            using (StudentDB2Context db = new StudentDB2Context())
+            {
+                student = db.Students.Where(x => x.StudentId == id).FirstOrDefault();
+            }
+
+            return student;
         }
     }
 }
