@@ -18,5 +18,12 @@ namespace DoubleTablesASPNETMVC5.Controllers
 
             return View(students);
         }
+
+
+        // New Student Screen
+        public ActionResult NewStudent()
+        {
+            return View();
+        }
     }
 }

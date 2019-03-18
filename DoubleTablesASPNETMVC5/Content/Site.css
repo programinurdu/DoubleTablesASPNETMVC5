@@ -16,3 +16,8 @@ textarea {
     max-width: 280px;
 }
 
+.img-border {
+    border: 1px solid Grey;
+    padding: 0;
+}
+
