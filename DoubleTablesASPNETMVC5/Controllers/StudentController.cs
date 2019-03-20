@@ -1,9 +1,6 @@
 ﻿using DoubleTablesASPNETMVC5.Models.DB;
 using DoubleTablesASPNETMVC5.ViewModels.Home;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace DoubleTablesASPNETMVC5.Controllers
@@ -13,10 +10,16 @@ namespace DoubleTablesASPNETMVC5.Controllers
         // GET: Student
         public ActionResult Index()
         {
+            return View();
+        }
+
+        public ActionResult StudentsList()
+        {
             StudentViewModels svm = new StudentViewModels();
             List<Student> students = svm.GetAllStudents();
 
-            return View(students);
+            //return View(students);
+            return Json(new { data = students }, JsonRequestBehavior.AllowGet);
         }
 
 

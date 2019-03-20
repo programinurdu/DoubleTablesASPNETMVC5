@@ -219,8 +219,8 @@
     <Content Include="Views\Home\TutorialsList.cshtml" />
     <Content Include="Views\Home\LoadDropDownList.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\GenderDropDownList.cshtml" />
-    <Content Include="Views\Student\Index.cshtml" />
     <Content Include="Views\Student\NewStudent.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

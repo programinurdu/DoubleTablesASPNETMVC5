@@ -14,5 +14,23 @@ function ReadURL(input) {
 }
 
 $(document).ready(function () {
-    $('#myTable').dataTable();
+    $('#myTable2').dataTable();
+});
+
+$(document).ready(function () {
+    $('#myTable').dataTable({
+        "ajax": {
+            "url": "/Student/StudentsList",
+            "type": "GET",
+            "datatype": "json"
+        },
+        "columns": [
+            { "data": "StudentId" },
+            { "data": "FullName" },
+            { "data": "Email" },
+            { "data": "GenderDesc" },
+            { "data": "Mobile" },
+            { "data": "Telephone" }
+        ]
+    });
 });

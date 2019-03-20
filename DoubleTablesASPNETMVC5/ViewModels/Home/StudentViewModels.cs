@@ -1,6 +1,5 @@
 ﻿using DoubleTablesASPNETMVC5.Models.DB;
 using DoubleTablesASPNETMVC5.ViewModels.Shared;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
