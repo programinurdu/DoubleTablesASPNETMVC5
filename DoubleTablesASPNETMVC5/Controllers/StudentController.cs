@@ -41,6 +41,7 @@ namespace DoubleTablesASPNETMVC5.Controllers
             return View();
         }
 
+        //
         public ActionResult StudentQualification(int id=0)
         {
             if (id == 0) { return RedirectToAction("NewStudent", "Student"); }
