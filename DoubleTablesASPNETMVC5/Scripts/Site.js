@@ -19,6 +19,9 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('#myTable').dataTable({
+        "scrollY": '50vh',
+        "scrollCollapse": true,
+        "paging": false,
         "ajax": {
             "url": "/Student/StudentsList",
             "type": "GET",

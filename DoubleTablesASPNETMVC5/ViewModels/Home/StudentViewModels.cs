@@ -1,5 +1,6 @@
 ﻿using DoubleTablesASPNETMVC5.Models.DB;
 using DoubleTablesASPNETMVC5.ViewModels.Shared;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -32,6 +33,27 @@ namespace DoubleTablesASPNETMVC5.ViewModels.Home
             }
 
             return students;
+        }
+
+        public void AddNewStudent(Student student)
+        {
+            using (StudentDB2Context db = new StudentDB2Context())
+            {
+                db.Students.Add(student);
+                db.SaveChanges();
+            }
+        }
+
+        public List<StudentsQualification> GetStudentQualificationById(int id)
+        {
+            List<StudentsQualification> qualifications = new List<StudentsQualification>();
+
+            using (StudentDB2Context db = new StudentDB2Context())
+            {
+                qualifications = db.StudentsQualifications.Where(x => x.StudentId == id).ToList();
+            }
+
+            return qualifications;
         }
 
         public Student GetStudentById(int id)

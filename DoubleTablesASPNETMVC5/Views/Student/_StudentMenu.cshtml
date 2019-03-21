@@ -1,0 +1,20 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <a href="" onclick="ChangePicture(); return false">
+            <img id="image" src="~/images/not-available.jpg" alt="" class="img-rounded img-border" width="140" height="140" />
+        </a>
+        <br />
+        <input accept="image/*" type="file" id="upload" name="file" onchange="ReadURL(this);" style="visibility: hidden;" />
+        @*<a href="" onclick="changePicture(); return false">Change Picture</a>*@
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-success"><a href='@Url.Action("NewStudent","Student")'>Home</a></li>
+            <li class="list-group-item list-group-item-success">Result Info</li>
+            <li class="list-group-item list-group-item-success">Student Fees</li>
+            <li class="list-group-item list-group-item-success"><a href='@Url.Action("StudentQualification","Student")'>Previous Qaulifications</a></li>
+        </ul>
+    </div>
+</div>

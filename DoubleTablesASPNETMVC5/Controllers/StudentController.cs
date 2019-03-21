@@ -28,5 +28,27 @@ namespace DoubleTablesASPNETMVC5.Controllers
         {
             return View();
         }
+
+        [HttpPost, ValidateAntiForgeryToken]
+        public ActionResult NewStudent(Student student)
+        {
+            if (ModelState.IsValid)
+            {
+                StudentViewModels svm = new StudentViewModels();
+                svm.AddNewStudent(student);
+            }
+
+            return View();
+        }
+
+        public ActionResult StudentQualification(int id=0)
+        {
+            if (id == 0) { return RedirectToAction("NewStudent", "Student"); }
+
+            StudentViewModels svm = new StudentViewModels();
+            List<StudentsQualification> qualifications = svm.GetStudentQualificationById(id);
+
+            return View(qualifications);
+        }
     }
 }
